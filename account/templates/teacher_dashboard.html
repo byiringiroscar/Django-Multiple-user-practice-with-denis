@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    welcome teacher {{ request.user }}
+    <span></span>
+    <a href="{% url 'logout' %} "><button class="btn btn-primary">Logout</button> </a>
+{% endblock %}

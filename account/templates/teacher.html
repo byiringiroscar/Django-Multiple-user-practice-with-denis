@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container">
+    <form action="" method="post">
+         <h1>Teacher Registration</h1>
+        {% csrf_token %}
+            {{ form.username.label }}
+        {{ form.username }}
+
+        {{ form.email.label }}
+            {{ form.email }}
+
+        {{ form.password1.label }}
+            {{ form.password1 }}
+
+        {{ form.password2.label }}
+            {{ form.password2 }}
+        <input type="submit" class="btn btn-primary mb-3">
+
+    </form>
+    </div>
+    {{ form.errors }}
+{% endblock %}
